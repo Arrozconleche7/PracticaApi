@@ -1,0 +1,21 @@
+@PracticaApi_HostAddress = http://localhost:5080 
+# Cambia el 5000 o usa https si tu terminal indica otro puerto
+
+### Registrar nuevo usuario
+POST {{PracticaApi_HostAddress}}/api/usuarios/registro
+Content-Type: application/json
+
+{
+  "nombre": "Jony Mejía",
+  "correo": "jony@ejemplo.com",
+  "clave": "secreta123"
+}
+
+### Iniciar sesión
+POST {{PracticaApi_HostAddress}}/api/usuarios/login
+Content-Type: application/json
+
+{
+  "correo": "jony@ejemplo.com",
+  "clave": "secreta123"
+}
